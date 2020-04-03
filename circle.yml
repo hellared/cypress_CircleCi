@@ -10,4 +10,4 @@ workflows:
           browser: chrome
           post-steps:
           - store_artifacts:
-              path: mochawesome-report/
+              path: cypress/reports
