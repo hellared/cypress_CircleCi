@@ -9,6 +9,9 @@ workflows:
           executor: cypress/browsers-chrome69
           browser: chrome
           record: true
+          parallel: true
+          parallelism: 2
+          group: 2 machines
           post-steps:
           - store_artifacts:
               path: cypress/reports
