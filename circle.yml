@@ -8,6 +8,8 @@ workflows:
           yarn: true
           executor: cypress/browsers-chrome69
           browser: chrome
+          parallel: true
+          parallelism: 2
           post-steps:
           - store_artifacts:
               path: cypress/reports
