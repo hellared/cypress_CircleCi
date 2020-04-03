@@ -9,7 +9,7 @@ workflows:
           executor: cypress/browsers-chrome69
           browser: chrome
           record: true
-        post-steps:
+          post-steps:
           - store_artifacts:
               path: cypress/reports
           - store_artifacts:
