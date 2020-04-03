@@ -1,0 +1,13 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1
+workflows:
+  build:
+    jobs:
+      - cypress/run:
+          environment:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          yarn: true
+          executor: cypress/browsers-chrome69
+          browser: chrome
+          record: true
