@@ -8,3 +8,6 @@ workflows:
           yarn: true
           executor: cypress/browsers-chrome69
           browser: chrome
+          post-steps:
+          - store_artifacts:
+              path: mochawesome-report
