@@ -9,7 +9,9 @@
   "reporterOptions": {
     "overwrite": false,
     "html": false,
-    "json": true
+    "json": true,
+    "reportPageTitle": "Report",
+    "charts": true
   },
   "projectId": "upyrht"
 }
