@@ -8,6 +8,11 @@ workflows:
           yarn: true
           executor: cypress/browsers-chrome69
           browser: chrome
+          record: true
           post-steps:
           - store_artifacts:
               path: cypress/reports
+          - store_artifacts:
+              path: cypress/videos
+          - store_artifacts:
+              path: cypress/screenshots
