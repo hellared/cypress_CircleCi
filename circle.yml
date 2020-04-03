@@ -9,5 +9,5 @@ workflows:
           executor: cypress/browsers-chrome69
           browser: chrome
           record: true
-    env:
+    environment:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
