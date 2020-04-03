@@ -6,3 +6,6 @@ workflows:
     jobs:
       - cypress/run:
           yarn: true
+          executor: cypress/browsers-chrome69
+          browser: chrome
+          record: true
