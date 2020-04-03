@@ -4,15 +4,18 @@ orbs:
 workflows:
   build:
     jobs:
+      - cypress/install
       - cypress/run:
+          requires:
+            - cypress/install
           yarn: true
           executor: cypress/browsers-chrome69
           browser: chrome
           record: true
           parallel: true
-          parallelism: 1
+          parallelism: 2
           group: 2 machines
-          post-steps:
+        post-steps:
           - store_artifacts:
               path: cypress/reports
           - store_artifacts:
