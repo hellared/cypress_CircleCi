@@ -13,5 +13,8 @@
     "merge-report": "mkdir cypress/reports && npx mochawesome-merge mochawesome-report/*.json > cypress/reports/mochawesome.json",
     "generate-report": "npx marge cypress/reports/mochawesome.json --o cypress/reports",
     "cypress": "yarn run clean-report && yarn run test && yarn run merge-report && yarn run generate-report"
+  },
+  "dependencies": {
+    "tough-cookie": "^4.1.3"
   }
 }
